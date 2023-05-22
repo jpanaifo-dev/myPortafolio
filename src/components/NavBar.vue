@@ -1,33 +1,32 @@
 <template>
     <el-menu
       :default-active="activeIndex"
-      class="el-menu-demo"
+      background-color="#171718"
+      active-text-color="#47D16E"
+      text-color="#fff"
       mode="horizontal"
+      style="font-family: Roboto; font-weight: 600;"
       :ellipsis="false"
+      class="flex-grow"
       @select="handleSelect"
     >
-      <el-menu-item index="0">LOGO</el-menu-item>
+      <el-menu-item index="0"      
+      style="font-size: 1.5rem; font-weight: bold; font-family: Poppins;"
+      >
+      Mi portafolio
+      </el-menu-item>
+      
       <div class="flex-grow" />
-      <el-menu-item index="1">Processing Center</el-menu-item>
-      <el-sub-menu index="2">
-        <template #title>Workspace</template>
-        <el-menu-item index="2-1">item one</el-menu-item>
-        <el-menu-item index="2-2">item two</el-menu-item>
-        <el-menu-item index="2-3">item three</el-menu-item>
-        <el-sub-menu index="2-4">
-          <template #title>item four</template>
-          <el-menu-item index="2-4-1">item one</el-menu-item>
-          <el-menu-item index="2-4-2">item two</el-menu-item>
-          <el-menu-item index="2-4-3">item three</el-menu-item>
-        </el-sub-menu>
-      </el-sub-menu>
+      <el-menu-item index="0">Home</el-menu-item>
+      <el-menu-item index="1">About me</el-menu-item>
+      <el-menu-item index="2">Projects</el-menu-item>
     </el-menu>
   </template>
   
   <script lang="ts" setup>
   import { ref } from 'vue'
   
-  const activeIndex = ref('1')
+  const activeIndex = ref('0')
   const handleSelect = (key: string, keyPath: string[]) => {
     console.log(key, keyPath)
   }
@@ -35,6 +34,7 @@
   
   <style>
   .flex-grow {
+    position: absolute;
     flex-grow: 1;
   }
   </style>
