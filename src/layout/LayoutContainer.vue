@@ -1,8 +1,8 @@
 <script setup>
+import {RouterView} from 'vue-router';
 import NavBar from '../components/NavBar.vue';
-import Landing from '../components/LandingPage.vue';
-import Aboutme from '../components/SectionAboutme.vue';
-import Gret from '../components/SectionGret.vue';
+import FooterView from '../components/FooterView.vue';
+
 
 </script>
 
@@ -11,44 +11,32 @@ import Gret from '../components/SectionGret.vue';
       <el-container
       style="font-family: Roboto; font-weight: 600;"
       >
-        <el-header
-        height="auto"
-        >
-          <NavBar/> 
-          <Landing/>        
+        <!-- <el-header  style="background-color: #171718; padding: 0px; height: 0px; "
+        > -->
+        <el-header style="background-color: #171718; padding: 0px; height: 60px;" >
+          <NavBar/>
+          <!-- <Landing/> -->
         </el-header>
 
-        <el-main class="body">
-        <Aboutme/>
-        <Gret/> 
+        
+        <el-main>
+          <RouterView/>
         </el-main>
 
         <el-footer>
-          <h1>Aquí va el footer</h1>
+          <FooterView/>
         </el-footer>
       </el-container>
     </div>
 </template>
 
 <style>
-.common-layout{
-    position: absolute;
-    width: 100%;
-    min-width: 320px;
-    min-height: 100vh;
-    background-color: #171718;
-    color: white;
-}
-
-.el-container{
-    margin: 0;
-}
-
-
-
-.body{
-/* width: 100%;
-min-width: 320px;
-min-height: 100vh; */
+.common-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #171718;
+  color: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 </style>
