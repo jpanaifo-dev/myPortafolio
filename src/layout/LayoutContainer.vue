@@ -36,6 +36,7 @@ import FooterView from '../components/FooterView.vue';
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  min-width: 100vh;
   background-color: #171718;
   color: #fff;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
