@@ -31,6 +31,7 @@ import FooterView from '../components/FooterView.vue';
 </template>
 
 <style>
+
 .common-layout {
   display: flex;
   flex-direction: column;
