@@ -1,38 +1,32 @@
 <script>
 import { Delete, Edit, Search, Share, DocumentRemove } from '@element-plus/icons-vue'
 import cardSkill from '../components/CardSkill.vue'
+import IconFacebook from '../components/icons/IconFacebook.vue';
+import IconGit from '../components/icons/IconGit.vue';
+import IconLinkedin from '../components/icons/IconLinkedin.vue';
 
 </script>
 
 <template>
 
   <el-row :gutter="20">
-    <el-col :span="12" :offset="6"
+    <el-col :span="16" :offset="4"
     >
     
     <div class="portfolio-container">
     <div class="portfolio-section">
       <div class="left-column">
         <div class="profile-picture">
-          <img src="../assets/images/image1.jpg" alt="Mi foto">
+          <img src="../assets/images/profile.jpg" alt="Mi foto">
         </div>
         <div class="greeting">
             <h2 style="display: inline;">Hola, </h2><h2 style="display: inline; color: #47D16E;" > soy Jeff</h2>
-
-            <div class="social-icons">
-          <i class="fab fa-twitter">
-            <img src="../assets/images/facebook.png" alt="">
-          </i>
-
-          <i class="fab fa-linkedin">
-            <img src="../assets/images/linkedin.png" alt="">
-          </i>
-          <i class="fab fa-github">
-            <img src="../assets/images/github.png" alt="">
-          </i>
         </div>
+        <div class="social-icons">
+              <i><IconFacebook/></i>
+              <i><IconLinkedin/></i>
+              <i><IconGit/></i>
         </div>
-
 
       </div>
       <div class="right-column">
@@ -63,12 +57,13 @@ import cardSkill from '../components/CardSkill.vue'
             </el-button>
 
         </div>
+
       </div>
     </div>
     </div>
     </el-col>
 
-    <el-col :span="12" :offset="6">
+    <el-col :span="16" :offset="4">
         <h1>Skills</h1>
         <div class="skill-container">
             <cardSkill
@@ -98,7 +93,7 @@ import cardSkill from '../components/CardSkill.vue'
         </div>
     </el-col>
 
-    <el-col :span="12" :offset="6">
+    <el-col :span="16" :offset="4">
         <h1>Projects</h1>
         <div class="skill-container">
             <cardSkill 
@@ -119,7 +114,7 @@ import cardSkill from '../components/CardSkill.vue'
         </div>
     </el-col>
 
-    <el-col :span="12" :offset="6">
+    <el-col :span="16" :offset="4">
         <h1>More projects</h1>
         <div class="skill-container">
             <cardSkill 
@@ -145,6 +140,18 @@ import cardSkill from '../components/CardSkill.vue'
 </template>
 
 <style>
+@media screen and (max-width: 380px) {
+  .portfolio-section {
+    flex-direction: column;
+  }
+
+  .left-column,
+  .right-column {
+    margin-right: 0;
+  }
+}
+
+
 .portfolio-container {
   display: flex;
   justify-content: center;
@@ -187,19 +194,10 @@ import cardSkill from '../components/CardSkill.vue'
 
 .social-icons {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   width: 120px;
 }
-
-.social-icons i {
-  margin-right: 16px; /* Agregamos la separación entre los iconos */
-}
-
-.social-icons i:last-child {
-  margin-right: 0; /* Quitamos la separación en el último icono */
-}
-
-
 
 .right-column {
   flex-grow: 1;
@@ -207,6 +205,8 @@ import cardSkill from '../components/CardSkill.vue'
 }
 
 .download-buttons {
+  display: flex;
+  justify-content: center;
   margin-top: 32px;
 }
 
