@@ -1,56 +1,45 @@
 <script setup>
 
 import cardSkill from '../components/CardSkill.vue'
+import carousel from '../components/CarouselView.vue'
 </script>
 
 <template>
-  <el-row :gutter="20">
-    <el-col :span="16" :offset="4">
+    <el-col :span="20" :offset="4">
+        <h1>Skills</h1>
+        <el-space wrap>
+            <cardSkill
+            title="Photoshop"
+            description="Uso photoshop desde tiempos memoriales, mis conocimientos son profundos."
+            />
+
+            <cardSkill
+            title="Figma"
+            description="Manejo a la perdección Figma, es una de mis herramientas de diseño preferidas."
+            />
+
+            <cardSkill
+            title="Adobe XD"
+            description="Está bien para maquetar el boceto, luego nos pasaos a figma ¿Si?"
+            />
+        </el-space>
         <h1>Projects</h1>
-        <div class="skill-container">
-            <cardSkill
-            title="Photoshop"
-            description="Uso photoshop desde tiempos memoriales, mis conocimientos son profundos."
-            />
+        <carousel/>
 
-            <cardSkill
-            title="Figma"
-            description="Manejo a la perdección Figma, es una de mis herramientas de diseño preferidas."
-            />
-
-            <cardSkill
-            title="Adobe XD"
-            description="Está bien para maquetar el boceto, luego nos pasaos a figma ¿Si?"
-            />
-            
-        </div>
-        <div class="skill-container">
-            <cardSkill
-            title="Photoshop"
-            description="Uso photoshop desde tiempos memoriales, mis conocimientos son profundos."
-            />
-
-            <cardSkill
-            title="Figma"
-            description="Manejo a la perdección Figma, es una de mis herramientas de diseño preferidas."
-            />
-
-            <cardSkill
-            title="Adobe XD"
-            description="Está bien para maquetar el boceto, luego nos pasaos a figma ¿Si?"
-            />
-            
-        </div>
-        
-        <div class="button-container">
-            <el-button 
-            
-            link>
-                Ver más
-                <el-icon  class="el-icon--right"><ArrowRight /></el-icon>
-            </el-button>
-        </div>
+        <h3>More projects</h3>
+        <el-space wrap>
+            <div
+            v-for="i in 9" :key="i"
+            >
+                 <cardProject/>
+            </div>
+        </el-space>
     </el-col>
-  </el-row>
+
+
+
 
 </template>
+<style>
+
+</style>

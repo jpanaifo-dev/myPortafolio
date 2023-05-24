@@ -16,9 +16,9 @@
 
     defineProps({
 
-        svg:{
+        logo:{
             type: String,
-            default: ''
+            default: "'../assets/vue.svg'"
         },
 
         title: {
@@ -49,6 +49,11 @@
     padding: 16px;
     align-items: center;
     text-align: center;
+    transition: 1s;
+  }
+
+  .card-skill:hover {
+  transform: scale(1.05); /* Aplica un aumento de escala al hacer hover */
   }
   
   .svg-section {

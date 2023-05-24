@@ -1,6 +1,9 @@
 <script>
 import { Delete, Edit, Search, Share, DocumentRemove } from '@element-plus/icons-vue'
+
 import cardSkill from '../components/CardSkill.vue'
+import CardProject from '../components/CardProject.vue';
+
 import IconFacebook from '../components/icons/IconFacebook.vue';
 import IconGit from '../components/icons/IconGit.vue';
 import IconLinkedin from '../components/icons/IconLinkedin.vue';
@@ -13,7 +16,7 @@ import IconLinkedin from '../components/icons/IconLinkedin.vue';
     <el-col :span="16" :offset="4"
     >
     
-    <div class="portfolio-container">
+   <div class="portfolio-container">
     <div class="portfolio-section">
       <div class="left-column">
         <div class="profile-picture">
@@ -63,11 +66,30 @@ import IconLinkedin from '../components/icons/IconLinkedin.vue';
     </div>
     </el-col>
 
-    <el-col :span="16" :offset="4">
-        <h1>Skills</h1>
+    <el-col :span="20" :offset="3">
         <div class="skill-container">
+          <h1>Skills</h1>
             <cardSkill
             title="Photoshop"
+            description="Uso photoshop desde tiempos memoriales, mis conocimientos son profundos."
+            />
+
+            <cardSkill
+            title="Figma"
+            description="Manejo a la perdección Figma, es una de mis herramientas de diseño preferidas."
+            />
+
+            <cardSkill
+            title="Adobe XD"
+            description="Está bien para maquetar el boceto, luego nos pasaos a figma ¿Si?"
+            />
+        </div>
+
+        <div class="skill-container">
+          <h1>Projects</h1>
+
+            <cardSkill 
+            title="Pothoshop"
             description="Uso photoshop desde tiempos memoriales, mis conocimientos son profundos."
             />
 
@@ -91,32 +113,9 @@ import IconLinkedin from '../components/icons/IconLinkedin.vue';
                 <el-icon  class="el-icon--right"><ArrowRight /></el-icon>
             </el-button>
         </div>
-    </el-col>
 
-    <el-col :span="16" :offset="4">
-        <h1>Projects</h1>
         <div class="skill-container">
-            <cardSkill 
-            title="Pothoshop"
-            description="Uso photoshop desde tiempos memoriales, mis conocimientos son profundos."
-            />
-
-            <cardSkill
-            title="Figma"
-            description="Manejo a la perdección Figma, es una de mis herramientas de diseño preferidas."
-            />
-
-            <cardSkill
-            title="Adobe XD"
-            description="Está bien para maquetar el boceto, luego nos pasaos a figma ¿Si?"
-            />
-            
-        </div>
-    </el-col>
-
-    <el-col :span="16" :offset="4">
-        <h1>More projects</h1>
-        <div class="skill-container">
+          <h1>More projects</h1>
             <cardSkill 
             title="Pothoshop"
             description="Uso photoshop desde tiempos memoriales, mis conocimientos son profundos."
@@ -214,10 +213,9 @@ import IconLinkedin from '../components/icons/IconLinkedin.vue';
   margin-right: 16px;
 }
 
+/* modify */
 .skill-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: inline-block;
   margin: 24px;
 }
 
